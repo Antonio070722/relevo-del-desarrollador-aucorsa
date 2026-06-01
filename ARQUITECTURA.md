@@ -91,4 +91,38 @@ Cada módulo (bus, conductor, lugar) es autónomo: su panel, su vista de detalle
 4. Crear `controller/turno/TurnoController.java` y `TurnoInfoController.java`.
 5. Registrar el nuevo panel en `MainView` y el nuevo controlador en `MainController`.
 6. Crear la tabla en MySQL con la misma nomenclatura en inglés.
+
+### 📐 Diagrama de Flujo y Relación de Capas (MVC + DAO)
+
+El siguiente esquema gráfico detalla cómo interactúan los componentes dentro del entorno Desktop para aislar la interfaz gráfica de la lógica de persistencia:
+
+```mermaid
+classDiagram
+    direction TR
+    class VistaUI {
+        +JFrame ventana
+        +inicializarComponentes()
+        +capturarEventos()
+    }
+    class ControladorApp {
+        -UsuarioDAO dao
+        -VistaUI vista
+        +procesarAccion()
+        +cargarDatosIniciales()
+    }
+    class UsuarioDAO {
+        -Connection conexion
+        +getById(int id)
+        +insert(Usuario u)
+    }
+    class BaseDeDatos {
+        <<Database>>
+        +Tabla Usuarios
+        +Tabla Configuracion
+    }
+
+    VistaUI --> ControladorApp : Envía Eventos de Usuario
+    ControladorApp --> UsuarioDAO : Solicita Datos / Persistencia
+    UsuarioDAO --> BaseDeDatos : Ejecuta Consultas SQL SQL
+
    No hace falta tocar nada más.

@@ -1,3 +1,16 @@
+# 🚀 El Relevo del Desarrollador: Gestión del Proyecto
+
+Documentación técnica prioritaria orientada a la transferencia de conocimiento exprés (puesta en marcha en < 2 horas).
+
+## 🗺️ Índice de Contenidos
+* [1. Requisitos del Sistema](#1-requisitos-del-sistema)
+* [2. Guía de Instalación y Despliegue](#2-guía-de-instalación-y-despliegue)
+* [3. Documentación de la Arquitectura Interna](#3-documentación-de-la-arquitectura-interna)
+* [4. Contrato de Operaciones de Datos (API Interna)](#4-contrato-de-operaciones-de-datos-api-interna)
+* [5. Historial de Versiones (Changelog)](#5-historial-de-versiones-changelog)
+* [6. Mantenibilidad, Testing y Extensibilidad](#6-mantenibilidad-testing-y-extensibilidad)
+
+
 # Aucorsa — Sistema de Gestión de Flotas
 
 Aplicación de escritorio para gestionar autobuses, conductores, lugares y rutas de una empresa de transporte urbano.
